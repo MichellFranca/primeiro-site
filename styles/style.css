@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat+Subrayada:wght@400;700&display=swap'); 
+/* fonte trazida do google para usar no projeto */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root { /* para a criação de variaveis globais no css desta forma mudando apenas 
+    os parametros mudará em todo o site*/
+    --cor-primaria: #003C43;
+    --cor-secundaria: #E3FEF7;
+    --cor-terciaria: #DCA47C;
+    --cor-hover: #77B0AA;
+
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: "Monteserrat", "sans-serif";
+}
+
+body {
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 20%; /* A propriedade padding define uma a distância entre 
+    o conteúdo de um elemento e suas bordas */
+}
+
+.cabecalho_menu{
+    display:flex;
+    gap: 80px;
+}
+
+.cabecalho_menu_link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria); 
+}
+
+.apresentacao {
+    padding: 5% 15%; /* o padding é para as alterações de espaço, quando dois dados 
+    o primeiro para cima e baixo e o segundo as laterais */
+    display: flex; /* coloca os quadrados lado a lado */
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao_conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* adiciona espaços iguais entre cada quadrado */
+}
+
+.apresentacao_conteudo_titulo {
+    font-size: 2,12rem;
+    font-family: var(--fonte-primaria);
+}
+
+.apresentacao_conteudo_texto {
+    font-size: 2.25rem; /* rem unidade de medida para deixar em qualquer site o texto no padrão 
+    no navegador do usuários */
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao_links {
+    display: flex;
+    flex-direction: column  ;
+    justify-content: space-between;
+    align-items: center; /* alinha os itens ou quadros no centro */
+    gap: 32px;
+}
+
+.apresentacao_links_subtitulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao_links_navegacao {
+    /* background-color: #22D4FD; */
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid #22D4FD;
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 21px 0%;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+
+}
+
+.apresentacao_links_navegacao:hover {
+    background-color: var(--cor-hover); /*  neste caso o botão muda de cor ao passar o mouse por cima */
+}
+
+.foto_nos {
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    border-radius: 16px;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+p:hover {
+    color: rgb(154, 181, 186);
+}
+
+span {
+    color: #fd2222; /* cor da palavra acionada */
+    border: 1px solid #22D4FD; /* inserção de borda na palavra */
+    padding: 1px; /* largura da borda */
+}
+
+.rodape {
+    padding: 24px;
+    text-align: center;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) { /* usado para mudança de dispositivos ou telas, tudo até 
+    1200 pxs usará o css de cima */
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho_menu {
+        justify-content: center;
+    }
+    
+    .apresentacao {
+        flex-direction: column-reverse; /* reverte os dados do html, neste caso coloca 
+        a imagem acima dos outros dados */
+        padding: 5%;
+    }
+
+    .apresentacao_conteudo {
+        width: auto; /* foi definido nesta tag uma largura automatica --- para mobile 
+        pode ser também width: 100%;*/
+    }
+}
+
+@media (max-width: 480px) and (max-width: 800px) { /* tamanho de tela para celular e 
+    tablet */
+
+}
